@@ -356,8 +356,7 @@ bash reinstall.sh netboot.xyz
 
 #### Method 1: Let the Script Automatically Search for ISO
 
-- The script will search for ISOs from <https://massgrave.dev/genuine-installation-media>, a site that collects official ISOs.
-- Only supports ISOs searching for Windows 10, 11, Server 2019, 2022, 2025.
+- The script will search for ISOs from <https://ntriver.org/download-windows-office>, a site that collects official ISOs.
 
 ```bash
 bash reinstall.sh windows \
@@ -366,49 +365,51 @@ bash reinstall.sh windows \
 ```
 
 <details>
-<summary>Supported languages</summary>
+<summary> --lang list </summary>
 
-```text
-ar-sa
-bg-bg
-cs-cz
-da-dk
-de-de
-el-gr
-en-gb
-en-us
-es-es
-es-mx
-et-ee
-fi-fi
-fr-ca
-fr-fr
-he-il
-hr-hr
-hu-hu
-it-it
-ja-jp
-ko-kr
-lt-lt
-lv-lv
-nb-no
-nl-nl
-pl-pl
-pt-pt
-pt-br
-ro-ro
-ru-ru
-sk-sk
-sl-si
-sr-latn-rs
-sv-se
-th-th
-tr-tr
-uk-ua
-zh-cn
-zh-hk
-zh-tw
-```
+Supports these three language format codes. Case insensitive.
+
+| CC Format | CC-CC Format | Language |
+| - | - | - |
+| ar | ar-sa | Arabic |
+| bg | bg-bg | Bulgarian |
+| cs | cs-cz | Czech |
+| da | da-dk | Danish |
+| de | de-de | German |
+| el | el-gr | Greek |
+| gb | en-gb | Eng_Intl |
+| en | en-us | English |
+| es | es-es | Spanish |
+| mx | es-mx | Spanish_Latam |
+| et | et-ee | Estonian |
+| fi | fi-fi | Finnish |
+| | fr-ca | FrenchCanadian |
+| fr | fr-fr | French |
+| he | he-il | Hebrew |
+| hr | hr-hr | Croatian |
+| hu | hu-hu | Hungarian |
+| it | it-it | Italian |
+| ja | ja-jp | Japanese |
+| ko | ko-kr | Korean |
+| lt | lt-lt | Lithuanian |
+| lv | lv-lv | Latvian |
+| no | nb-no | Norwegian |
+| nl | nl-nl | Dutch |
+| pl | pl-pl | Polish |
+| pp | pt-pt | Portuguese |
+| pt | pt-br | Brazilian |
+| ro | ro-ro | Romanian |
+| ru | ru-ru | Russian |
+| sk | sk-sk | Slovak |
+| sl | sl-si | Slovenian |
+| sr | sr-latn / sr-latn-rs | Serbian_Latin |
+| sv | sv-se | Swedish |
+| th | th-th | Thai |
+| tr | tr-tr | Turkish |
+| uk | uk-ua | Ukrainian |
+| cn | zh-cn | ChnSimp |
+| tw | zh-tw | ChnTrad |
+| hk | zh-hk | ChnTrad_Hong_Kong |
 
 </details>
 
@@ -436,7 +437,8 @@ bash reinstall.sh windows \
 
 - General
   - <https://msdl.gravesoft.dev>
-  - <https://massgrave.dev/genuine-installation-media>
+  - <https://ntriver.org/download-windows-office> (Recommended, ISOs are up to date)
+  - <https://massgrave.dev/genuine-installation-media> (Recommended, ISOs are up to date)
   - <https://next.itellyou.cn>
   - <https://www.xitongku.com>
   - <https://www.microsoft.com/software-download/windows10> (Need to open it with a non-Windows User-Agent)
@@ -556,7 +558,7 @@ Open File menu > Open Image File, select the iso to be installed to get the imag
 
 #### Considerations for Installing Windows on ARM
 
-Most ARM machines support installing latest Windows 11.
+Most ARM cloud server support installing Windows 11.
 
 During the installation process, you might encounter a black screen, and the serial console may display `ConvertPages: failed to find range`, but neither issue affects the installation.
 
